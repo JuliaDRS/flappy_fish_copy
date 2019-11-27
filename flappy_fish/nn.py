@@ -20,8 +20,8 @@ class NN():
         """
         self.model = Sequential()
         self.model.add(Dense(8, input_dim=4, activation="tanh"))
-        # self.model.add(Dense(32, input_dim=8, activation="relu"))
-        # self.model.add(Dense(64, input_dim=32, activation="relu"))
+        self.model.add(Dense(32, input_dim=8, activation="relu"))
+        self.model.add(Dense(64, input_dim=32, activation="relu"))
         self.model.add(Dense(1, input_dim=8, activation="softplus"))
         self.model.compile(loss="categorical_crossentropy",
                            optimizer=Adam(),
