@@ -72,7 +72,7 @@ class Fish(NN):
         nn_input = np.array([[self.y] + [i for i in pipe_info]], dtype=np.float32)
         nn_input[0,2] = self.x - nn_input[0,2]
         nn_input[0,3] = self.y - nn_input[0,3]
-        nn_input[0,4] = self.y - nn_input[0,4]
+        # nn_input[0,4] = self.y - nn_input[0,4]
         # Based on NN output, jump or not
         # can only jump when fish is falling
         if self.model.predict(nn_input)[0,0] > 0.5 and self.velocity >= 0.0:
