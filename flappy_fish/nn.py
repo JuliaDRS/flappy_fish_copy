@@ -35,7 +35,7 @@ class NN():
         Returns a weight list.
         """
         chance = 0.005
-        mutate_range = 0.025
+        mutate_range = 0.052
         new_weights_list = []
         for weights in weights_list:
             new_weights = []
